@@ -1,0 +1,201 @@
+:root {
+    --whiteColor:#FFF;
+    --blackColor:#111;
+    --textColor:#444;
+    --redColor:rgb(117, 11, 11);
+    --bgColor:rgb(210, 210, 210);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 100%;
+    position: relative;
+    left: 0%;
+    border-radius: 25px;
+}
+li {
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--whiteColor);
+    width: 60%;
+    position: relative;
+    top: 100px;
+    border-radius: 25px;
+    padding: 50px;
+}
+.container .title h1 {
+    font-size: 45px;
+    color: var(--blackColor);
+    margin-top: 20px;
+}
+.container .title p {
+    width: 100%;
+    font-size: 18px;
+    color: var(--textColor);
+    line-height: 1;
+    font-weight: 500;
+    margin: 15px 0 30px 0;
+}
+.container .preparation {
+    margin-bottom: 30px;
+}
+.container .preparation h2 {
+    color: var(--redColor);
+    font-size: 28px;
+}
+.container .preparation li {
+    position: relative;
+    left: 30px;
+    margin: 8px 0;
+    color: var(--textColor);
+}
+.container .preparation li strong {
+    font-weight: bold;
+}
+.container .ingredients {
+    margin-bottom: 30px;
+}
+.container .ingredients h1 {
+    color: var(--redColor);
+    font-size: 30px;
+    position: relative;
+}
+.container .ingredients li {
+    position: relative;
+    left: 20px;
+    margin: 10px 0;
+    color: var(--textColor);
+}
+hr {
+    margin-bottom: 30px;
+}
+.container .instructions {
+    margin-bottom: 30px;
+}
+.container .instructions h1 {
+    color: var(--redColor);
+    font-size: 36px;
+}
+.container .instructions li {
+    margin: 15px 0;
+    color: var(--textColor);
+}
+.container .instructions li strong {
+    font-weight: bold;
+    font-size: 18px;
+    color: #111;
+}
+
+footer .title h2 {
+    color: var(--redColor);
+    font-size: 35px;
+}
+footer .title p {
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: 550;
+}
+
+footer .sales {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 20px;
+}
+footer .sales > .key p {
+    color: var(--textColor);
+}
+footer .sales > .value p {
+    color: var(--redColor);
+}
+footer .sales > div p {
+    font-size: 18px;
+    font-weight: 550;
+    position: relative;
+    top: -15px;
+    font-family: sans-serif;
+}
+footer .sales > div hr {
+    width: 300px;
+}
+footer .sales > .value hr {
+    position: relative;
+    left: -110px;
+}
+
+/* Start Media Query */
+@media screen and (max-width:1024px) {
+    .container {
+        width: 70%;
+    }
+    .container .title h1 {
+        font-size: 38px;
+    }
+}
+@media screen and (max-width:768px) {
+    .container {
+        width: 70%;
+    }
+}
+@media screen and (max-width:425px) {
+    .container {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-35%);
+    }
+    img {
+        width: 100%;
+    }
+    .container .title h1 {
+        font-size: 28px;
+    }
+    .container .title p {
+        line-height: 1.3;
+        width: 100%;
+    }
+    footer .sales {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .sales .value {
+        position: relative;
+        left: -100px;
+    }
+    footer .sales .value hr {
+        position: relative;
+        left: -220px;
+    }
+}
+@media screen and (max-width:375px) {
+    .container .title h1 {
+        font-size: 22px;
+    }
+    .container .instructions h1 {
+        font-size: 30px;
+    }
+    footer .sales > .key hr {
+        position: relative;
+        left: 50px;
+        width: 250px;
+        overflow: hidden;
+    }
+}
+/* End Media Query */
+
+
